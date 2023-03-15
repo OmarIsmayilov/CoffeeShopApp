@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:background="@color/mainColor"
+    tools:context=".HomeFragment">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="381dp"
+        android:layout_height="151dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="60dp"
+        android:text="@string/find_the_best_coffee_for_you"
+        android:textColor="@color/textColor"
+        android:textSize="42sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+    </TextView>
+
+    <androidx.appcompat.widget.SearchView
+        android:id="@+id/etSearch"
+        android:layout_width="387dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        app:queryBackground="@drawable/search_bg"
+        android:drawableStart="@drawable/baseline_search_24"
+        android:drawablePadding="10dp"
+        android:ems="10"
+        android:backgroundTint="@color/textColor"
+        app:queryHint="Find Your Coffee..."
+        app:iconifiedByDefault="false"
+        android:inputType="textPersonName"
+        android:paddingStart="10dp"
+        android:textColorHint="#9AAAA5A5"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.666"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        tools:ignore="MissingConstraints" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvName"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etSearch"
+        tools:listitem="@layout/name_item">
+
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv"
+        android:layout_width="411dp"
+        android:layout_height="447dp"
+        android:layout_marginTop="350dp"
+        app:spanCount="2"
+        app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.333"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints"
+        tools:listitem="@layout/card_item">
+
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

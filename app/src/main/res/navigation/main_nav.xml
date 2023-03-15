@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_nav"
+    app:startDestination="@id/homeFragment2">
+
+    <fragment
+        android:id="@+id/homeFragment2"
+        android:name="com.example.coffeeshop.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment2_to_detailFragment"
+            app:destination="@id/detailFragment"
+            app:enterAnim="@android:anim/fade_in"
+            app:popUpTo="@id/homeFragment2" />
+        <argument
+            android:name="name"
+            app:argType="string"
+            android:defaultValue="User" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailFragment"
+        android:name="com.example.coffeeshop.DetailFragment"
+        android:label="fragment_detail"
+        tools:layout="@layout/fragment_detail" >
+        <argument
+            android:name="coffee"
+            app:argType="com.example.coffeeshop.Coffee" />
+    </fragment>
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.example.coffeeshop.ProfileFragment"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile" />
+    <fragment
+        android:id="@+id/bagFragment2"
+        android:name="com.example.coffeeshop.BagFragment"
+        android:label="fragment_bag"
+        tools:layout="@layout/fragment_bag" />
+    <fragment
+        android:id="@+id/favFragment2"
+        android:name="com.example.coffeeshop.favFragment"
+        android:label="fragment_fav"
+        tools:layout="@layout/fragment_fav" />
+</navigation>

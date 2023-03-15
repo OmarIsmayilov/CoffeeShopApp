@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/mainColor"
+    android:clipToPadding="false"
+    android:fitsSystemWindows="true"
+    tools:context=".DetailFragment">
+
+
+   <com.google.android.material.imageview.ShapeableImageView
+       android:id="@+id/ivCoffee"
+       android:layout_width="380dp"
+       android:layout_height="300dp"
+       android:elevation="9dp"
+       android:scaleType="fitXY"
+       app:layout_constraintEnd_toEndOf="parent"
+       app:layout_constraintStart_toStartOf="parent"
+       app:layout_constraintTop_toTopOf="parent"
+       app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.App.CornerCustom"
+       app:srcCompat="@drawable/ic_launcher_background">
+
+   </com.google.android.material.imageview.ShapeableImageView>
+
+
+   <TextView
+       android:id="@+id/tvName"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:layout_marginTop="5dp"
+       android:gravity="center"
+       android:text="Cappuccino"
+       android:textColor="#F5FBFBFB"
+       android:textSize="40sp"
+       android:textStyle="bold"
+       app:layout_constraintBottom_toTopOf="@+id/cardView"
+       app:layout_constraintEnd_toEndOf="parent"
+       app:layout_constraintStart_toStartOf="parent"
+       app:layout_constraintTop_toBottomOf="@+id/ivCoffee"
+       app:layout_constraintVertical_bias="0.005">
+
+   </TextView>
+
+   <TextView
+       android:id="@+id/textView4"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:layout_marginStart="25dp"
+       android:gravity="center"
+       android:text="Size"
+       android:textColor="#5EFFFFFF"
+       android:textSize="17sp"
+       app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+       app:layout_constraintStart_toStartOf="parent"
+       app:layout_constraintTop_toBottomOf="@+id/ivCoffee"
+       app:layout_constraintVertical_bias="0.949">
+
+   </TextView>
+
+   <LinearLayout
+       android:id="@+id/linearLayout"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:layout_marginBottom="60dp"
+       android:orientation="horizontal"
+       app:layout_constraintBottom_toTopOf="@+id/cardView"
+       app:layout_constraintEnd_toEndOf="parent"
+       app:layout_constraintHorizontal_bias="0.49"
+       app:layout_constraintStart_toStartOf="parent">
+
+      <RelativeLayout
+          android:id="@+id/cvS"
+          android:layout_width="110dp"
+          android:layout_height="40dp"
+          android:layout_marginEnd="20dp"
+          android:background="@drawable/cv_selected">
+
+         <TextView
+             android:id="@+id/tvS"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             android:gravity="center"
+             android:text="S"
+             android:textColor="@color/purple_500"
+             android:textSize="20sp"
+             android:textStyle="bold">
+
+         </TextView>
+      </RelativeLayout>
+
+      <RelativeLayout
+          android:id="@+id/cvM"
+          android:layout_width="110dp"
+          android:layout_height="40dp"
+          android:layout_marginEnd="20dp"
+          android:background="@drawable/cv_normal">
+
+         <TextView
+             android:id="@+id/tvM"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             android:gravity="center"
+             android:text="M"
+             android:textColor="#95FBFBFB"
+             android:textSize="20sp">
+
+         </TextView>
+      </RelativeLayout>
+
+      <RelativeLayout
+          android:id="@+id/cvL"
+          android:layout_width="110dp"
+          android:layout_height="40dp"
+          android:background="@drawable/cv_normal">
+
+         <TextView
+             android:id="@+id/tvL"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             android:gravity="center"
+             android:text="L"
+             android:textColor="#95FBFBFB"
+             android:textSize="20sp">
+
+         </TextView>
+      </RelativeLayout>
+
+
+   </LinearLayout>
+
+
+   <TextView
+       android:id="@+id/textView3"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:layout_marginStart="24dp"
+       android:layout_marginBottom="5dp"
+       android:gravity="center"
+       android:text="Description"
+       android:textColor="#5EFFFFFF"
+       android:textSize="17sp"
+       app:layout_constraintBottom_toTopOf="@+id/scrollView2"
+       app:layout_constraintStart_toStartOf="parent"
+       app:layout_constraintTop_toBottomOf="@+id/ivCoffee"
+       app:layout_constraintVertical_bias="0.931">
+
+   </TextView>
+
+   <ScrollView
+       android:id="@+id/scrollView2"
+       android:layout_width="347dp"
+       android:layout_height="129dp"
+       android:layout_marginStart="24dp"
+       android:layout_marginBottom="20dp"
+       app:layout_constraintBottom_toTopOf="@+id/textView4"
+       app:layout_constraintStart_toStartOf="parent">
+
+      <RelativeLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content">
+
+         <TextView
+             android:id="@+id/tvDescription"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis at mauris id mi malesuada suscipit. Aliquam vel eros lacus. Sed tincidunt metus a turpis fringilla fringilla. Proin conva"
+             android:textColor="#E6FFFFFF"
+             android:textSize="16sp"
+             app:layout_constraintStart_toStartOf="parent"
+             app:layout_constraintVertical_bias="0.399">
+
+         </TextView>
+
+      </RelativeLayout>
+
+
+   </ScrollView>
+
+   <androidx.cardview.widget.CardView
+       android:id="@+id/cardView"
+       android:layout_width="match_parent"
+       android:layout_height="80dp"
+       android:backgroundTint="@color/secondColor"
+       app:cardCornerRadius="30dp"
+       app:layout_constraintBottom_toBottomOf="parent">
+
+      <androidx.constraintlayout.widget.ConstraintLayout
+          android:layout_width="match_parent"
+          android:layout_height="match_parent">
+
+
+         <Button
+             android:id="@+id/btnInc"
+             android:layout_width="45dp"
+             android:layout_height="45dp"
+             android:layout_marginEnd="40dp"
+             android:background="@drawable/baseline_add_24"
+             android:elevation="8dp"
+             app:backgroundTint="@color/mainColor"
+             app:layout_constraintBottom_toBottomOf="parent"
+             app:layout_constraintEnd_toStartOf="@+id/buttonAdd"
+             app:layout_constraintTop_toTopOf="parent"
+             app:layout_constraintVertical_bias="0.542">
+
+         </Button>
+
+         <Button
+             android:id="@+id/btnDec"
+             android:layout_width="45dp"
+             android:layout_height="45dp"
+             android:layout_marginStart="20dp"
+             android:background="@drawable/baseline_horizontal_rule_24"
+             app:backgroundTint="@color/mainColor"
+             app:layout_constraintBottom_toBottomOf="parent"
+             app:layout_constraintStart_toStartOf="parent"
+             app:layout_constraintTop_toTopOf="parent"
+             app:layout_constraintVertical_bias="0.571">
+
+         </Button>
+
+         <TextView
+             android:id="@+id/tvCount"
+             android:layout_width="43dp"
+             android:layout_height="46dp"
+             android:layout_marginStart="64dp"
+             android:gravity="center"
+             android:text="1"
+             android:textColor="@color/textColor"
+             android:textSize="35sp"
+             android:textStyle="bold"
+             app:layout_constraintBottom_toBottomOf="parent"
+             app:layout_constraintStart_toStartOf="parent"
+             app:layout_constraintTop_toTopOf="parent"
+             app:layout_constraintVertical_bias="0.558">
+
+         </TextView>
+
+         <Button
+             android:id="@+id/buttonAdd"
+             android:layout_width="200dp"
+             android:layout_height="60dp"
+             android:layout_marginEnd="16dp"
+             android:background="@drawable/button_bg_2"
+             android:elevation="8dp"
+             android:text="Add to bag"
+             app:backgroundTint="@color/mainColor"
+             app:layout_constraintBottom_toBottomOf="parent"
+             app:layout_constraintEnd_toEndOf="parent"
+             app:layout_constraintTop_toTopOf="parent">
+
+         </Button>
+
+
+      </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+   </androidx.cardview.widget.CardView>
+
+   <CheckBox
+       android:id="@+id/cbFav"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:layout_alignParentBottom="true"
+       android:layout_marginStart="23dp"
+       android:layout_marginTop="12dp"
+       android:layout_marginEnd="28dp"
+       android:button="@drawable/fav_button_selector"
+       app:layout_constraintEnd_toEndOf="parent"
+       app:layout_constraintStart_toEndOf="@+id/tvName"
+       app:layout_constraintTop_toBottomOf="@+id/ivCoffee" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
