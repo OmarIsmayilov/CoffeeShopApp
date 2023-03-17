@@ -1,6 +1,7 @@
 package com.example.coffeeshop
 
 
+import android.annotation.SuppressLint
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.navigation.Navigation
@@ -12,6 +13,7 @@ class CoffeeAdapter(var coffeeList : ArrayList<Coffee>) : RecyclerView.Adapter<C
 
     inner class MyViewHolder(val binding : CardItemBinding) : RecyclerView.ViewHolder(binding.root)
 
+    @SuppressLint("NotifyDataSetChanged")
     fun setFilteredList(coffeeList: ArrayList<Coffee>){
         this.coffeeList = coffeeList
         notifyDataSetChanged()
@@ -31,7 +33,7 @@ class CoffeeAdapter(var coffeeList : ArrayList<Coffee>) : RecyclerView.Adapter<C
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
         val coffee = coffeeList[position]
         holder.binding.coffee = coffee
-        holder.binding.tvPrice.text = coffee.price.toString()
+
         holder.binding.ivCoffee.setImageResource(coffee.image)
 
         holder.binding.coffeeItem.setOnClickListener {
