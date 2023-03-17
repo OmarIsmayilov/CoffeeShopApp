@@ -30,7 +30,7 @@ class CoffeeAdapter(var coffeeList : ArrayList<Coffee>) : RecyclerView.Adapter<C
 
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
         val coffee = coffeeList[position]
-        holder.binding.tvCoffee.text = coffee.name
+        holder.binding.coffee = coffee
         holder.binding.tvPrice.text = coffee.price.toString()
         holder.binding.ivCoffee.setImageResource(coffee.image)
 
